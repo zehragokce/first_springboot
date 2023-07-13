@@ -21,11 +21,12 @@ public class CourseController {
 
     @GetMapping("/courses")
     public ResponseEntity<List<Course>> retrieveAllCourses(){
-        List<Course> list = Arrays.asList(
+        int sayi = 1;
+        List<Course> courseList = Arrays.asList(
                 new Course(1, "Learn AWS", "withGokce"),
                 new Course(2, "Learn DevOps", "withGokce")
         );
-        return new ResponseEntity<>(list, HttpStatusCode.valueOf(404));
+        return new ResponseEntity<>(courseList, HttpStatusCode.valueOf(404));
     }
 
 }
